@@ -1,0 +1,11 @@
+node_modules
+server/node_modules
+android
+dist
+.git
+.gradle
+.env
+.env.local
+.env.*.local
+*.zip
+*.log

@@ -1,0 +1,21 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { COIN_PACKS } from '../src/coinPacks.js';
+import { Storage } from '../src/storage.js';
+test('tiered packs increase and purchase credit survives retries and reset',()=>{
+  const map=new Map();globalThis.localStorage={getItem:k=>map.get(k)||null,setItem:(k,v)=>map.set(k,v)};
+  Storage.reset();
+  assert.deepEqual(COIN_PACKS.map(p=>p.coins),[300,800,1800,4000]);
+  const initial=Storage.get().coins;
+  assert.equal(Storage.creditPurchase('verified-test-token',300),true);
+  assert.equal(Storage.get().coins,initial+300);
+  assert.equal(Storage.creditPurchase('verified-test-token',300),false);
+  Storage.reset();
+  assert.equal(Storage.creditPurchase('verified-test-token',300),false);
+  const before=Storage.get().coins;
+  localStorage.setItem=()=>{throw Error('Storage full');};
+  assert.throws(()=>Storage.creditPurchase('another-token',800));
+  assert.equal(Storage.get().coins,before);
+  assert.throws(()=>Storage.creditPurchase('bad',-300));
+  delete globalThis.localStorage;
+});

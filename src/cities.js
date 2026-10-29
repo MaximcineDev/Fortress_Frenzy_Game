@@ -1,0 +1,35 @@
+// Stylised city settings for the fictional world-tour campaign.
+// City, country code, country, landmark, mission name, realm, terrain, sky palette.
+const cities=[
+ ['Lagos','NG','Nigeria','Third Mainland Bridge','Lagoon Defence',4,'water',['#318be1','#bce7ed','#f9dfa6']],
+ ['Abuja','NG','Nigeria','Aso Rock','Rock of Resolve',0,'green',['#5b9be2','#c7e6df','#f6d6a0']],
+ ['Accra','GH','Ghana','Black Star Gate','Black Star Watch',4,'water',['#317cd0','#bde6ee','#f6d29d']],
+ ['Abidjan','CI',"Côte d’Ivoire",'Saint Paul’s Cathedral','Lagoon Vanguard',0,'water',['#478ed4','#b6d9eb','#e9cfad']],
+ ['Dakar','SN','Senegal','African Renaissance Monument','Atlantic Beacon',2,'water',['#637ec2','#edb9a1','#f8d28b']],
+ ['Cairo','EG','Egypt','Pyramids of Giza','Sands of the Crown',2,'desert',['#4c9ccc','#dbe6cc','#f4cc87']],
+ ['Addis Ababa','ET','Ethiopia','African Union Headquarters','Highland Alliance',0,'green',['#418bd5','#c7e1e4','#e0d6b4']],
+ ['Nairobi','KE','Kenya','KICC Tower','Savannah Sentinel',0,'savannah',['#438fd3','#d1e4d5','#f0d9a6']],
+ ['Johannesburg','ZA','South Africa','Hillbrow Tower','Golden City Guard',0,'savannah',['#745c9b','#ddadad','#f1c87f']],
+ ['Cape Town','ZA','South Africa','Table Mountain','Mountain Stronghold',4,'water',['#4099d4','#b8e3e6','#f6e0ba']],
+ ['London','GB','United Kingdom','Elizabeth Tower','Thames Watch',0,'water',['#627eac','#c1d4df','#e4d9c6']],
+ ['Paris','FR','France','Eiffel Tower','Iron Crown',0,'green',['#b777a0','#edb7c7','#f2dcc1']],
+ ['Rome','IT','Italy','Colosseum','Arena of Honour',2,'green',['#5d8fc4','#cfdfdd','#f4d6b0']],
+ ['Barcelona','ES','Spain','Sagrada Família','Spires of Dawn',5,'green',['#7b88d4','#d9d0ed','#f8cda4']],
+ ['Istanbul','TR','Türkiye','Bosphorus Bridge','Two Continents',4,'water',['#587ec4','#cdbde0','#f0c3a3']],
+ ['Dubai','AE','United Arab Emirates','Burj Khalifa','Skyline Siege',2,'desert',['#5969a6','#c8b3d0','#f8caa4']],
+ ['Mumbai','IN','India','Gateway of India','Gateway Guard',4,'water',['#3a86bd','#c0d7da','#f3d9aa']],
+ ['Bangkok','TH','Thailand','Wat Arun','Temple of Dawn',0,'green',['#937fbd','#e9c5d1','#f5d4ab']],
+ ['Beijing','CN','China','Temple of Heaven','Celestial Keep',0,'green',['#5683ae','#c7dbda','#edcfac']],
+ ['Tokyo','JP','Japan','Tokyo Tower','Cherry Blossom Watch',5,'green',['#345782','#8faccb','#e8c9d4']],
+ ['New York','US','United States','Statue of Liberty','Liberty Watch',4,'water',['#426da9','#b9cee1','#efc9b5']],
+ ['Washington','US','United States','United States Capitol','Capital Shield',0,'green',['#4c83b9','#c7dbe1','#f3dcc7']],
+ ['Mexico City','MX','Mexico','Angel of Independence','Golden Angel',2,'green',['#3e8ea9','#b7dcd4','#ead8ba']],
+ ['Rio de Janeiro','BR','Brazil','Christ the Redeemer','Emerald Heights',0,'water',['#258db7','#b7e1de','#f1dfbb']],
+ ['Buenos Aires','AR','Argentina','Obelisk','Silver Banner',4,'green',['#709ace','#d4e6ed','#f5d9c0']],
+ ['Sydney','AU','Australia','Sydney Opera House','Harbour Harmony',4,'water',['#327db3','#a6d6df','#e7d4bb']],
+ ['Singapore','SG','Singapore','Marina Bay Sands','Garden Citadel',0,'water',['#314b7d','#8ea7c2','#e7c7b0']],
+ ['Seoul','KR','South Korea','N Seoul Tower','Mountain of Light',5,'green',['#856aa8','#c4b1d2','#eecdbd']],
+ ['Toronto','CA','Canada','CN Tower','Northern Beacon',1,'water',['#537baa','#bdd5e7','#e5e6e8']],
+ ['Athens','GR','Greece','Parthenon','Crown of the World',2,'green',['#7461a3','#dba9b6','#f2d59d']]
+];
+export const CITIES=cities.map((c,i)=>({id:i+1,key:c[0].toLowerCase().replaceAll(' ','-'),city:c[0],countryCode:c[1],country:c[2],landmark:c[3],missionTitle:c[4],realmIndex:c[5],terrain:c[6],sky:c[7],chapter:i<5?'West Africa':i<10?'Across Africa':i<15?'Europe':i<20?'Asia & Middle East':i<25?'The Americas':'Final World Tour'}));

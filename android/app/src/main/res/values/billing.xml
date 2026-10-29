@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Play Console > Monetisation setup > Licensing: Base64 public key (not a service account key). -->
+    <string name="play_billing_public_key" translatable="false"></string>
+</resources>

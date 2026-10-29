@@ -1,0 +1,9 @@
+{
+  "appId": "com.maximcinestudios.castlesiege",
+  "appName": "Fortress Frenzy",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  }
+}

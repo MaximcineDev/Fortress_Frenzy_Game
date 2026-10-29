@@ -1,0 +1,9 @@
+{
+  "appId": "com.maximcinestudios.fortressfrenzy",
+  "appName": "Fortress Frenzy",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  }
+}
