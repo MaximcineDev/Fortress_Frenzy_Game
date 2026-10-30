@@ -19,7 +19,7 @@ Existing 12-mission saves keep their coins, upgrades, skins, stars and access to
 
 ## World Tour scenery and castles
 
-The campaign now visits 30 cities, starting with Lagos, Abuja, Accra, Abidjan, Dakar, Cairo, Addis Ababa, Nairobi, Johannesburg and Cape Town, then continuing worldwide. Each destination has its own illustrated landmark backdrop, palette, terrain and fortress layout. Five bundled city atlases match the game’s colourful painted style. See WORLD_TOUR_AND_PROFILE.md for the complete itinerary. Landmarks are scenery; the two foreground castles and commanders remain the damageable gameplay targets.
+The campaign visits 30 cities, starting with Lagos, Abuja, Accra, Abidjan, Dakar, Cairo, Addis Ababa, Nairobi, Johannesburg and Cape Town, then continuing worldwide. Each destination has its own illustrated landmark backdrop, palette, terrain and fortress layout. Five bundled city atlases match the game’s colourful painted style. See WORLD_TOUR_AND_PROFILE.md for the complete itinerary. Landmarks are scenery; the two foreground castles and commanders remain the damageable gameplay targets.
 
 Difficulty and unlock progression carry over. Offline commander health starts at 225; mission enemy health grows gently to 388. Timed missions and minimum-health objectives remain enforced, and timers stop while paused. The new campaign reuses existing mission IDs, preserving previously earned stars and purchased access.
 
